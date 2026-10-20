@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Honeypot</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="board">
+
+    <div class="card start">
+    <div class="logo-row">
+        <span class="logo">Honeypot</span>
+        <img class="bee" src="{{ url_for('static', filename='logo.png') }}">
+        </div>
+    <p class="topline">Logged in as <strong>{{ username }}</strong> ⋆.˚ <a href="/logout">Log out</a> </p>
+
+<h2>Share what's on your mind 💋</h2>
+
+<div class="composer">
+<form method="post">
+    <textarea name="message" rows="3" placeholder="Tell us what you think..." required></textarea>
+    <button type="submit">Post</button>
+</form>
+</div>
+
+<h2 class="posts-head">Posts</h2>
+{% for post in posts %}
+<div class="post">
+    <p class="meta"><strong>{{ post[0] }}</strong>· {{ post[2] }}</p>
+    <p class="msg">{{ post[1] }}</p>
+</div>
+{% endfor %}
+
+</div>
+
+</body>
+</html>

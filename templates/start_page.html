@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Honeypot</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card start">
+    <div class="logo-row">
+        <span class="logo">Honeypot</span>
+        <img class="bee" src="{{ url_for('static', filename='logo.png') }}">
+        </div>
+
+<p class="welcome" style="margin-top: 40px">Welcome to my message board! . ݁⋆ ۶ৎ ݁˖ . ݁</p>
+
+<p><a href="/signup_page" class="btn" style="margin-top: 40px" >Sign up</a></p>
+<p><a href="/login_page" class="btn yellow">Log in</a></p>
+
+</div>
+</body>
+</html>
+
